@@ -1,8 +1,9 @@
 package asciiart
 
-func storeInputAndBanner(Args []string) (string, string) {
+func StoreInputAndBanner(Args []string) (string, string) {
 	var stringToArt string
 	var bannerStyle = "standard"
+
 	switch len(Args) {
 	case 3:
 		stringToArt = Args[0]
@@ -12,5 +13,6 @@ func storeInputAndBanner(Args []string) (string, string) {
 	default:
 		stringToArt = ""
 	}
+
 	return stringToArt, bannerStyle
 }
