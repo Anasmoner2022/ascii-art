@@ -6,10 +6,10 @@ func StoreInputAndBanner(Args []string) (string, string) {
 
 	switch len(Args) {
 	case 3:
-		stringToArt = Args[0]
-		bannerStyle = Args[1]
+		stringToArt = Args[1]
+		bannerStyle = Args[2]
 	case 2:
-		stringToArt = Args[0]
+		stringToArt = Args[1]
 	default:
 		stringToArt = ""
 	}
