@@ -2,7 +2,6 @@ package main
 
 import (
 	ascii "asciiart/features"
-	"fmt"
 	"os"
 	"strings"
 )
@@ -12,12 +11,7 @@ func main() {
 	stringToArt, banner := ascii.StoreInputAndBanner(args)
 	bannerFile := ascii.ReadBanner(banner)
 	bannerSlice := strings.Split(bannerFile, "\n")
-	for h := range 9 {
-		for _, w := range stringToArt {
-			selectChar := int((w-32)*9) + h
-			fmt.Print(bannerSlice[selectChar])
-		}
-		fmt.Println()
-	}
-
+	splitInput := strings.Split(stringToArt, "\\n")
+	outPut := ascii.DrawingInput(splitInput, bannerSlice)
+	println(outPut)
 }
