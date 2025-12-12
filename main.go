@@ -11,5 +11,5 @@ func main() {
 	stringToArt, banner := ascii.StoreInputAndBanner(args)
 	fmt.Println("String:", stringToArt)
 	bannerFile := ascii.ReadBanner(banner)
-
+	fmt.Println(bannerFile)
 }
