@@ -2,6 +2,7 @@ package main
 
 import (
 	ascii "asciiart/features"
+	"fmt"
 	"os"
 	"strings"
 )
@@ -13,5 +14,5 @@ func main() {
 	bannerSlice := strings.Split(bannerFile, "\n")
 	splitInput := strings.Split(stringToArt, "\\n")
 	outPut := ascii.DrawingInput(splitInput, bannerSlice)
-	println(outPut)
+	fmt.Print(outPut)
 }
