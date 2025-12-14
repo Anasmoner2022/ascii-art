@@ -3,10 +3,10 @@ package asciiart
 import "log"
 
 func DrawingInput(input []string, bannerSlice []string) string {
-	var convertedString string
+	var convertedStrine string
 	for i, str := range input {
 		if str == "" && i != 0 {
-			convertedString += "\n"
+			convertedStrine += "\n"
 			continue
 		}
 		for h := 1; h < 9; h++ {
@@ -15,11 +15,11 @@ func DrawingInput(input []string, bannerSlice []string) string {
 					log.Fatalf("You Write Non-Printable Char. ")
 				}
 				selectChar := int((w-32))*9 + h
-				convertedString += bannerSlice[selectChar]
+				convertedStrine += bannerSlice[selectChar]
 			}
-			convertedString += "\n"
+			convertedStrine += "\n"
 		}
 	}
 
-	return convertedString
+	return convertedStrine
 }
